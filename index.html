@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Letonia Motorsports</title>
+    <title>Cupra Designs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="https://brandemia.org/sites/default/files/inline/images/maxresdefault.jpg"/>
 </head>
 <body>
-<img src="https://i.pinimg.com/originals/e1/4b/7e/e14b7ec2e6f08b16493a10f0d564c0a0.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+<div id="slideshow">
+    <div>
+        <img src="https://i.pinimg.com/originals/e1/4b/7e/e14b7ec2e6f08b16493a10f0d564c0a0.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+    </div>
+    <div>
+        <img src="https://i.blogs.es/95ad41/cupra-tavascan-concept-suv-electrico-13/1366_521.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+    </div>
+    <div>
+        <img src="https://www.diariomotor.com/imagenes/2021/03/cupra-tavascan-exterior-0321-01.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+    </div>
+    <div>
+        <img src="https://www.que.es/wp-content/uploads/2021/03/cupra-1.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+    </div>
+</div>
 <a style="font-family: 'Khiara Script';font-weight: lighter; font-size: 40pt; color: white; position: absolute; left: 44%; top: 25px;">Cupra</a>
 <div class="topnav" id="myTopnav" style="position: relative">
         <a href="#home" class="active">Home</a>
@@ -21,8 +35,11 @@
             <i class="fa fa-bars"></i>
         </a>
 </div>
-
+<div id="slideTitle" >
+    <a style="font-family: 'Khiara Script'; font-weight: lighter; font-size: 60pt; position: absolute; left: 50%; right: 50%; top: 50%; color: white; ">Tavascan</a>
+</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
     function myFunction() {
@@ -33,5 +50,17 @@
             x.className = "topnav";
         }
     }
+</script>
+<script>
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+        $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+    }, 10000);
 </script>
 </html>
