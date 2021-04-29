@@ -8,35 +8,47 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/jpg" href="https://brandemia.org/sites/default/files/inline/images/maxresdefault.jpg"/>
+    <link rel="shortcut icon" type="image/jpg"
+          href="https://brandemia.org/sites/default/files/inline/images/maxresdefault.jpg"/>
 </head>
 <body>
-<div id="slideshow">
-    <div>
-        <img src="https://i.pinimg.com/originals/e1/4b/7e/e14b7ec2e6f08b16493a10f0d564c0a0.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+<div id="all" style="width: 100%">
+    <div id="home" style="flex-direction: column">
+        <div id="slideshow">
+            <div>
+                <img src="https://i.pinimg.com/originals/e1/4b/7e/e14b7ec2e6f08b16493a10f0d564c0a0.jpg"
+                     style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+            </div>
+            <div>
+                <img src="https://i.blogs.es/95ad41/cupra-tavascan-concept-suv-electrico-13/1366_521.jpg"
+                     style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+            </div>
+            <div>
+                <img src="https://www.diariomotor.com/imagenes/2021/03/cupra-tavascan-exterior-0321-01.jpg"
+                     style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+            </div>
+            <div>
+                <img src="https://www.que.es/wp-content/uploads/2021/03/cupra-1.jpg"
+                     style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+            </div>
+        </div>
+        <div class="topnav" id="myTopnav" style="position: relative">
+            <a href="#home" class="active">Home</a>
+            <a href="#buy">Buy</a>
+            <a href="#contact" style="display: flex">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="slideTitle"
+             style="display: flex; flex-direction: column; height: 95vh; width: 100%;align-items: center; justify-content: center">
+            <h1 style="font-family: 'Khiara Script'; font-weight: lighter; font-size: 120pt; position: relative; color: white; ">Tavascan</h1>
+        </div>
     </div>
-    <div>
-        <img src="https://i.blogs.es/95ad41/cupra-tavascan-concept-suv-electrico-13/1366_521.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
+
+    <div id="designs" style="width: 10px; height: 100vh">
+        <a>s</a>
     </div>
-    <div>
-        <img src="https://www.diariomotor.com/imagenes/2021/03/cupra-tavascan-exterior-0321-01.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
-    </div>
-    <div>
-        <img src="https://www.que.es/wp-content/uploads/2021/03/cupra-1.jpg" style="position: absolute;top: 0; left: 0; width: 100%; height: 100%;object-fit: cover;">
-    </div>
-</div>
-<a style="font-family: 'Khiara Script';font-weight: lighter; font-size: 40pt; color: white; position: absolute; left: 44%; top: 25px;">Cupra</a>
-<div class="topnav" id="myTopnav" style="position: relative">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">Designs</a>
-        <a href="#contact">Buy</a>
-        <a href="#about">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-</div>
-<div id="slideTitle" >
-    <a style="font-family: 'Khiara Script'; font-weight: lighter; font-size: 60pt; position: absolute; left: 50%; right: 50%; top: 50%; color: white; ">Tavascan</a>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -54,7 +66,7 @@
 <script>
     $("#slideshow > div:gt(0)").hide();
 
-    setInterval(function() {
+    setInterval(function () {
         $('#slideshow > div:first')
             .fadeOut(1000)
             .next()
